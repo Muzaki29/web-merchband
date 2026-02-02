@@ -29,6 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(Login::class)
+            ->viteTheme('resources/css/app.css')
             ->colors([
                 'primary' => Color::hex('#AA2B1D'),
             ])

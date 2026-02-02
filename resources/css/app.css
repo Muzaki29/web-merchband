@@ -23,7 +23,7 @@
 
 /* Custom Utilities for Glassmorphism & Animations */
 @utility glass {
-    @apply backdrop-blur-xl bg-white/70 border-b border-white/30 shadow-sm supports-[backdrop-filter]:bg-white/60;
+    @apply backdrop-blur-xl bg-white/70 border-b border-white/30 shadow-sm supports-backdrop-filter:bg-white/60;
 }
 
 @utility glass-card {

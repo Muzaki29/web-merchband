@@ -9,6 +9,8 @@ use Flowframe\Trend\TrendValue;
 
 class SalesChart extends ChartWidget
 {
+    protected static ?int $sort = 2;
+
     protected ?string $heading = 'Orders per Month';
 
     protected function getData(): array

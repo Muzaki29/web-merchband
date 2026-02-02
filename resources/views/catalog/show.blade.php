@@ -3,7 +3,7 @@
         <div class="lg:grid lg:grid-cols-2 lg:gap-x-16 xl:gap-x-20">
             <!-- Product Image -->
             <div class="product-image-container mb-10 lg:mb-0">
-                <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-100 relative group">
+                <div class="aspect-4/5 rounded-2xl overflow-hidden bg-slate-100 relative group">
                     <img src="{{ $product->image_url }}" 
                          alt="{{ $product->name }}" 
                          class="w-full h-full object-center object-cover transform transition-transform duration-700 group-hover:scale-105">
@@ -52,7 +52,7 @@
                         
                         <div class="grid grid-cols-4 gap-4" role="radiogroup">
                             @foreach($product->variants as $variant)
-                                <label class="group relative border-2 rounded-xl py-4 px-4 flex items-center justify-center text-sm font-bold uppercase cursor-pointer hover:border-brand/30 transition-all duration-200 focus:outline-none sm:flex-1 bg-white text-slate-700 shadow-sm has-[:checked]:bg-brand has-[:checked]:text-white has-[:checked]:border-brand has-[:checked]:shadow-brand/30 {{ $variant->stock == 0 ? 'opacity-50 cursor-not-allowed bg-slate-50' : '' }}">
+                                <label class="group relative border-2 rounded-xl py-4 px-4 flex items-center justify-center text-sm font-bold uppercase cursor-pointer hover:border-brand/30 transition-all duration-200 focus:outline-none sm:flex-1 bg-white text-slate-700 shadow-sm has-checked:bg-brand has-checked:text-white has-checked:border-brand has-checked:shadow-brand/30 {{ $variant->stock == 0 ? 'opacity-50 cursor-not-allowed bg-slate-50' : '' }}">
                                     <input type="radio" name="product_variant_id" value="{{ $variant->id }}" class="sr-only" {{ $variant->stock == 0 ? 'disabled' : '' }} required data-stock="{{ $variant->stock }}">
                                     <span id="size-choice-{{ $variant->id }}-label">{{ $variant->size }}</span>
                                     

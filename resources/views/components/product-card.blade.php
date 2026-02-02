@@ -2,13 +2,13 @@
 
 <div class="group relative bg-white rounded-2xl flex flex-col overflow-hidden card-hover border border-slate-100">
     <!-- Image Container -->
-    <div class="aspect-[4/5] bg-slate-100 relative overflow-hidden">
+    <div class="aspect-4/5 bg-slate-100 relative overflow-hidden">
         <img src="{{ $product->image_url }}" 
              alt="{{ $product->name }}" 
              class="w-full h-full object-center object-cover transform transition-transform duration-700 group-hover:scale-105">
         
         <!-- Overlay Gradient -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
         <!-- Quick Action Button -->
         <div class="absolute bottom-4 left-4 right-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">

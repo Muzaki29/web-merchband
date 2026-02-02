@@ -13,9 +13,23 @@
                     <a href="{{ route('orders.track') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('orders.track') ? 'border-brand text-slate-900' : 'border-transparent text-slate-500 hover:text-slate-900 hover:border-slate-300' }} text-sm font-semibold transition duration-150 ease-in-out">
                         Track Order
                     </a>
+                    @auth
+                        <a href="{{ route('dashboard') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('dashboard') ? 'border-brand text-slate-900' : 'border-transparent text-slate-500 hover:text-slate-900 hover:border-slate-300' }} text-sm font-semibold transition duration-150 ease-in-out">
+                            Dashboard
+                        </a>
+                    @endauth
                 </div>
             </div>
             <div class="flex items-center gap-4">
+                @guest
+                    <a href="{{ route('login') }}" class="text-sm font-medium text-slate-500 hover:text-brand transition-colors">
+                        Login
+                    </a>
+                    <span class="text-slate-300">|</span>
+                    <a href="{{ route('register') }}" class="text-sm font-medium text-slate-500 hover:text-brand transition-colors">
+                        Register
+                    </a>
+                @endguest
                 <a href="{{ route('cart.index') }}" class="group relative p-2 text-slate-500 hover:text-brand transition duration-300 bg-slate-100/50 hover:bg-slate-100 rounded-full">
                     <span class="sr-only">View Cart</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

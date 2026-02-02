@@ -33,7 +33,7 @@
                 <div class="relative lg:h-auto z-10 hidden lg:block">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
                         <img class="w-full h-full object-cover" src="https://placehold.co/800x1000/AA2B1D/FFFFFF/png?text=Pancarona+Merch" alt="Hero Image">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent"></div>
                         <div class="absolute bottom-6 left-6 text-white">
                             <p class="font-display font-bold text-2xl">Pancarona Collection</p>
                             <p class="text-white/80">Limited Edition</p>
