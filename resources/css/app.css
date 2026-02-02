@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    
+    --color-brand: #AA2B1D;
+    --color-brand-hover: #8F2418;
+    --color-brand-active: #7A1F15;
+    --color-brand-soft: #F6E8E6;
+    --color-header: #0B1220;
+    
+    /* Modern Light Theme Neutrals */
+    --color-surface: #ffffff;
+    --color-surface-soft: #f8fafc;
+    --color-surface-hover: #f1f5f9;
+}
+
+/* Custom Utilities for Glassmorphism & Animations */
+@utility glass {
+    @apply backdrop-blur-xl bg-white/70 border-b border-white/30 shadow-sm supports-[backdrop-filter]:bg-white/60;
+}
+
+@utility glass-card {
+    @apply backdrop-blur-md bg-white/60 border border-white/40 shadow-sm hover:shadow-xl hover:bg-white/80 transition-all duration-300;
+}
+
+@utility text-balance {
+    text-wrap: balance;
+}
+
+@utility card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
