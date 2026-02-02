@@ -13,11 +13,11 @@
                 <div class="text-center lg:text-left z-10">
                     <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand/5 border border-brand/10 text-brand text-sm font-semibold mb-6">
                         <span class="flex h-2 w-2 rounded-full bg-brand mr-2"></span>
-                        New Collection 2026
+                        Official Merchandise
                     </div>
                     <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6">
-                        Wear the <br>
-                        <span class="text-brand">Music.</span>
+                        PANCARONA <br>
+                        <span class="text-brand">MERCH OFFICIAL.</span>
                     </h1>
                     <p class="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto lg:mx-0 mb-8 font-light leading-relaxed">
                         Authentic merchandise that connects you to the sound. Premium quality, sustainable materials, and designs that speak louder than words.
@@ -26,20 +26,17 @@
                         <a href="#catalog" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-brand hover:bg-brand-hover hover:scale-105 transition-all duration-300 shadow-lg shadow-brand/20">
                             Shop Latest Drops
                         </a>
-                        <a href="#" class="inline-flex justify-center items-center px-8 py-4 border border-slate-200 text-lg font-bold rounded-full text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 transition-all duration-300">
-                            View Lookbook
-                        </a>
                     </div>
                 </div>
 
                 <!-- Visual Content -->
                 <div class="relative lg:h-auto z-10 hidden lg:block">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
-                        <img class="w-full h-full object-cover" src="https://placehold.co/800x1000/AA2B1D/FFFFFF/png?text=Tour+Merch+2026" alt="Hero Image">
+                        <img class="w-full h-full object-cover" src="https://placehold.co/800x1000/AA2B1D/FFFFFF/png?text=Pancarona+Merch" alt="Hero Image">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                         <div class="absolute bottom-6 left-6 text-white">
-                            <p class="font-display font-bold text-2xl">World Tour '26</p>
-                            <p class="text-white/80">Limited Edition Hoodie</p>
+                            <p class="font-display font-bold text-2xl">Pancarona Collection</p>
+                            <p class="text-white/80">Limited Edition</p>
                         </div>
                     </div>
                     <!-- Decorative floating element -->

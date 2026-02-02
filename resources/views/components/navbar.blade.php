@@ -3,15 +3,15 @@
         <div class="flex justify-between h-20">
             <div class="flex items-center">
                 <a href="{{ route('catalog.index') }}" class="shrink-0 flex items-center gap-2 group">
-                    <!-- Logo Icon -->
-                    <svg class="h-9 w-9 text-brand transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 3-2 3-2zm0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M9 19v2m0-2h2" />
-                    </svg>
-                    <span class="font-display font-bold text-2xl tracking-tight text-slate-900">Merch<span class="text-brand">Band</span></span>
+                    <!-- Logo Image -->
+                    <img src="{{ asset('images/logo.png') }}" alt="Pancarona Merch Official" class="h-10 w-10 object-cover rounded-full transition-transform duration-300 group-hover:scale-105">
                 </a>
                 <div class="hidden md:ml-10 md:flex md:space-x-8">
                     <a href="{{ route('catalog.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('catalog.*') ? 'border-brand text-slate-900' : 'border-transparent text-slate-500 hover:text-slate-900 hover:border-slate-300' }} text-sm font-semibold transition duration-150 ease-in-out">
                         Catalog
+                    </a>
+                    <a href="{{ route('orders.track') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('orders.track') ? 'border-brand text-slate-900' : 'border-transparent text-slate-500 hover:text-slate-900 hover:border-slate-300' }} text-sm font-semibold transition duration-150 ease-in-out">
+                        Track Order
                     </a>
                 </div>
             </div>

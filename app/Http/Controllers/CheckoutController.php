@@ -149,4 +149,20 @@ class CheckoutController extends Controller
         }
         return view('checkout.payment', compact('order', 'snapToken'));
     }
+
+    public function track()
+    {
+        return view('orders.track');
+    }
+
+    public function find(Request $request)
+    {
+        $request->validate([
+            'order_number' => 'required|string|exists:orders,order_number',
+        ], [
+            'order_number.exists' => 'Order not found. Please check your order number.',
+        ]);
+
+        return redirect()->route('orders.show', $request->order_number);
+    }
 }
