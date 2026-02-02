@@ -2,115 +2,134 @@
     $brandColor = \Filament\Support\Colors\Color::hex('#AA2B1D');
 @endphp
 
-<div class="flex min-h-screen items-center justify-center relative overflow-hidden bg-slate-50 font-sans">
+<div class="flex min-h-screen w-full bg-[#0a0a0a] text-white font-sans overflow-hidden">
     
-    <!-- Animated Background Mesh -->
-    <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-brand/20 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-200 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-2000"></div>
-        <div class="absolute top-[20%] right-[20%] w-[40%] h-[40%] bg-orange-100 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-4000"></div>
-        <!-- Noise Texture -->
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiLz4KPC9zdmc+')] opacity-20"></div>
-    </div>
-
-    <!-- Main Card Container -->
-    <div class="relative w-full max-w-5xl bg-white/60 backdrop-blur-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row m-4 border border-white/50">
+    <!-- Left Section: Visual Identity -->
+    <div class="hidden lg:flex lg:w-1/2 relative flex-col justify-between p-12 bg-[#AA2B1D] overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90"></div>
         
-        <!-- Left Side: Visual/Brand -->
-        <div class="relative w-full lg:w-5/12 bg-brand text-white overflow-hidden flex flex-col items-center justify-center p-12 text-center group">
-            <!-- Background Pattern -->
-            <div class="absolute inset-0 opacity-20">
-                <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
-                </svg>
-            </div>
-            <div class="absolute inset-0 bg-linear-to-br from-brand via-brand to-brand-active opacity-90"></div>
-            
-            <!-- Floating Circles Decor -->
-            <div class="absolute -top-12 -left-12 w-32 h-32 rounded-full bg-white/10 blur-xl group-hover:scale-110 transition-transform duration-700"></div>
-            <div class="absolute -bottom-12 -right-12 w-40 h-40 rounded-full bg-black/10 blur-xl group-hover:scale-110 transition-transform duration-700"></div>
+        <!-- Animated Glows -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600 rounded-full mix-blend-screen filter blur-[128px] opacity-40 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-600 rounded-full mix-blend-screen filter blur-[128px] opacity-30 animate-blob"></div>
 
-            <!-- Content -->
-            <div class="relative z-10 transform group-hover:-translate-y-1 transition-transform duration-500">
-                <div class="mb-8 relative">
-                    <div class="absolute inset-0 bg-white/20 rounded-full blur-xl transform scale-110"></div>
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="relative h-32 w-32 rounded-full shadow-2xl border-4 border-white/10 object-cover">
+        <!-- Logo & Brand -->
+        <div class="relative z-10">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="h-12 w-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-8 w-8 object-contain">
                 </div>
-                <h1 class="text-3xl font-display font-bold mb-3 tracking-tight">Pancarona Merch</h1>
-                <p class="text-brand-50 text-sm font-light max-w-xs mx-auto leading-relaxed opacity-90">
-                    Control Panel & Management System
-                </p>
-            </div>
-            
-            <div class="absolute bottom-8 text-xs text-brand-100/60 font-medium tracking-widest uppercase">
-                Est. {{ date('Y') }}
+                <span class="text-xl font-bold tracking-wider uppercase opacity-90">Pancarona Merch</span>
             </div>
         </div>
 
-        <!-- Right Side: Login Form -->
-        <div class="w-full lg:w-7/12 p-8 lg:p-16 bg-white/40">
-            <div class="max-w-md mx-auto">
-                <div class="text-center lg:text-left mb-10">
-                    <h2 class="text-2xl font-bold text-slate-800 font-display">Welcome Back</h2>
-                    <p class="text-slate-500 mt-2 text-sm">Please enter your details to sign in.</p>
-                </div>
-
-                <div class="filament-login-form space-y-6">
-                    {{ $this->form }}
-                </div>
-
-                <div class="mt-8 pt-6 border-t border-slate-200/60 flex items-center justify-between text-sm">
-                    <a href="{{ url('/') }}" class="flex items-center text-slate-500 hover:text-brand transition-colors font-medium group">
-                        <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                        </svg>
-                        Back to Store
-                    </a>
-                    <span class="text-slate-400 text-xs">Secure Connection</span>
-                </div>
-            </div>
+        <!-- Hero Text -->
+        <div class="relative z-10 mb-20">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+                Manage Your <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">Empire.</span>
+            </h1>
+            <p class="text-lg text-white/60 max-w-md leading-relaxed">
+                Complete control over your merchandise, orders, and customer relationships in one powerful dashboard.
+            </p>
         </div>
 
+        <!-- Footer -->
+        <div class="relative z-10 flex items-center justify-between text-xs font-medium tracking-widest text-white/40 uppercase">
+            <p>© {{ date('Y') }} Pancarona Merch</p>
+            <p>System v1.0</p>
+        </div>
     </div>
-    
-    <!-- Bottom Credit -->
-    <div class="absolute bottom-4 text-center w-full pointer-events-none">
-        <p class="text-[10px] text-slate-400 uppercase tracking-widest opacity-60">
-            Powered by Pancarona Technology
-        </p>
+
+    <!-- Right Section: Login Form -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-center p-8 relative bg-[#0a0a0a]">
+        <!-- Mobile Background Glow -->
+        <div class="absolute inset-0 lg:hidden overflow-hidden pointer-events-none">
+            <div class="absolute top-[-10%] right-[-10%] w-[80%] h-[80%] bg-[#AA2B1D] rounded-full mix-blend-screen filter blur-[100px] opacity-20"></div>
+        </div>
+
+        <div class="w-full max-w-md relative z-10">
+            <!-- Header -->
+            <div class="mb-10 text-center lg:text-left">
+                <h2 class="text-3xl font-bold mb-2">Welcome Back</h2>
+                <p class="text-zinc-500">Enter your credentials to access the admin panel.</p>
+            </div>
+
+            <!-- Form -->
+            <div class="filament-login-form space-y-6">
+                {{ $this->form }}
+            </div>
+
+            <!-- Footer Links -->
+            <div class="mt-10 flex items-center justify-between pt-6 border-t border-zinc-800/50">
+                <a href="{{ url('/') }}" class="group flex items-center text-sm text-zinc-500 hover:text-white transition-colors">
+                    <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back to Store
+                </a>
+                <span class="text-xs text-zinc-600">Secure Environment</span>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-6 text-center w-full pointer-events-none lg:hidden">
+            <p class="text-[10px] text-zinc-600 uppercase tracking-widest">
+                Powered by Pancarona Technology
+            </p>
+        </div>
     </div>
 
     <style>
-        /* Custom overrides for Filament Form Inputs to match the theme */
+        /* Custom overrides for Filament Form Inputs in Dark Mode */
         .fi-input-wrp {
-            border-radius: 0.75rem !important; /* rounded-xl */
-            background-color: rgba(255, 255, 255, 0.5) !important;
-            backdrop-filter: blur(4px);
-            transition: all 0.3s ease;
+            background-color: #171717 !important; /* Zinc 900 */
+            border-color: #27272a !important; /* Zinc 800 */
+            color: white !important;
+            border-radius: 0.5rem !important;
+            transition: all 0.2s ease;
+        }
+        .fi-input-wrp input {
+            color: white !important;
         }
         .fi-input-wrp:focus-within {
-            background-color: #fff !important;
-            box-shadow: 0 4px 6px -1px rgba(170, 43, 29, 0.1), 0 2px 4px -1px rgba(170, 43, 29, 0.06) !important;
             border-color: #AA2B1D !important;
+            box-shadow: 0 0 0 1px #AA2B1D !important;
+            background-color: #27272a !important;
         }
+        
+        /* Button Styling */
         .fi-btn-primary {
             background-color: #AA2B1D !important;
-            border-radius: 0.75rem !important;
+            color: white !important;
+            border-radius: 0.5rem !important;
             padding-top: 0.75rem !important;
             padding-bottom: 0.75rem !important;
             font-weight: 600 !important;
             transition: all 0.3s ease !important;
-            box-shadow: 0 4px 14px 0 rgba(170, 43, 29, 0.39) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
         }
         .fi-btn-primary:hover {
             background-color: #8F2418 !important;
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(170, 43, 29, 0.23) !important;
+            box-shadow: 0 4px 12px rgba(170, 43, 29, 0.4) !important;
         }
-        /* Checkbox styling */
+
+        /* Checkbox Styling */
         input[type="checkbox"] {
-            border-radius: 0.25rem;
+            background-color: #171717 !important;
+            border-color: #27272a !important;
             color: #AA2B1D !important;
+            border-radius: 4px !important;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #AA2B1D !important;
+            border-color: #AA2B1D !important;
+        }
+        
+        /* Labels */
+        label {
+            color: #a1a1aa !important; /* Zinc 400 */
         }
     </style>
 </div>
